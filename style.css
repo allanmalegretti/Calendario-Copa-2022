@@ -30,6 +30,11 @@ ul {
     list-style: none;
 }
 
+ul li img {
+    width: 50px;
+    height: 50px;
+}
+
 body {
     background: #121214;
     background-image: var(--bg);
@@ -51,6 +56,16 @@ body * {
 header {
     margin-bottom: 63px;
     text-align: center;
+}
+
+header img {
+    scale: 85%;
+}
+
+header h1 {
+    text-transform: uppercase;
+    color: white;
+    font-size: 26px;
 }
 
 #cards {
@@ -129,18 +144,6 @@ header {
     animation: appear .7s forwards;
 }
 
-/* .card:nth-child(1) {
-    animation-delay: .5s;
-}
-
-.card:nth-child(2) {
-    animation-delay: 1s;
-}
-
-.card:nth-child(3) {
-    animation-delay: 1.5s;
-} */
-
 @keyframes appear {
     0% {
         transform: translateY(-50px);
@@ -148,7 +151,6 @@ header {
     }
 
     100% {
-        /* transform: translateY(0px); */
         opacity: 1;
     }
 }
@@ -158,5 +160,14 @@ header {
         max-width: 670px;
         flex-direction: row;
         flex-wrap: wrap;
+    }
+}
+
+@media (min-width: 1024px) {
+    #cards {
+        max-width: 1100px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
